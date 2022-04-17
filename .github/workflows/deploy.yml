@@ -31,7 +31,7 @@ jobs:
 
       # 本番環境の場合のみ、ENV_NAMEをprodとする
       - name: Set env vars for prod
-        if: github.ref == 'refs/heads/main'
+        # if: github.ref == 'refs/heads/main'
         run: echo "ENV_NAME=prod" >> $GITHUB_ENV
 
       # GitHub Actionsの環境にlaravel-fargate-appリポジトリのコードをチェックアウトする
