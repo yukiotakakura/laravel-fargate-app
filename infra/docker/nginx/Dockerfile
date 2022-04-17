@@ -17,4 +17,7 @@ COPY --from=node /opt /opt
 # nginx config file
 COPY ./infra/docker/nginx/*.conf /etc/nginx/conf.d/
 
+# イメージのビルド時にアプリケーションのコードをマウントする
+COPY ./backend/public /work/backend/public
+
 WORKDIR /work/backend
